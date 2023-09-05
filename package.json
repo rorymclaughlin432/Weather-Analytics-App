@@ -1,0 +1,41 @@
+{
+  "name": "Weather Analytics App",
+  "version": "1.0.0",
+  "description": "Weather Analytics App using API endpoints",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "test:debug": "node --inspect-brk ./node_modules/.bin/jest --runInBand",
+    "test-coverage": "jest --coverage",
+    "lint": "eslint --ignore-path .gitignore --ignore-pattern node_modules . --ignore-pattern coverage '/test/' --ext .js",
+    "lint:fix": "eslint --ignore-path .gitignore --ignore-pattern node_modules . --ignore-pattern coverage '/test/' --ext .js --fix"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jest": "^29.5.4",
+    "ajv": "^8.12.0",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "express": "^4.18.2",
+    "fast-csv": "^4.3.6",
+    "jsonwebtoken": "^9.0.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-mocks-http": "^1.13.0",
+    "sequelize": "^6.32.1",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^2.1.2",
+    "jest": "^29.6.3"
+  }
+}
